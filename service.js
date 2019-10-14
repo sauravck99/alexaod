@@ -5,6 +5,10 @@ const _ = require("underscore");
 const express = require('express');
 const bodyParser = require('body-parser');
 const PubSub = require('pubsub-js');
+
+// adding alexa verifier middleware  RDH
+let alexaVerifier = require('alexa-verifier-middleware');
+
 PubSub.immediateExceptions = true;
 
 const OracleBot = require('@oracle/bots-node-sdk');
@@ -42,6 +46,7 @@ module.exports = new function() {
 
     var app = express();
     var alexaRouter = express.Router();
+    alexaRouter.use(alexaVerifier); // use alexaverifier package RDH  
     alexaRouter.use(bodyParser.json());
     // load routers with body-parser applied
     //var appRouter = OracleBot.Middleware.webhookReceiver();
