@@ -46,7 +46,7 @@ module.exports = new function() {
     // load routers with body-parser applied
     //var appRouter = OracleBot.Middleware.webhookReceiver();
     var alexaRouter = OracleBot.Middleware.webhookReceiver();
-    app.use(appRouter);
+    //app.use(appRouter);
     app.use('/alexa', alexaRouter);
     var logger = (config ? config.logger : null);
     if (!logger) {
