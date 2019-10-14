@@ -335,7 +335,7 @@ module.exports = new function() {
       }
     };
     //alexa_app.express(alexaRouter, "/", true);
-    alexa_app.express({router: alexaRouter, checkCert: false});
+    alexa_app.express({router: alexaRouter, checkCert: true});
 
     app.locals.endpoints = [];
     app.locals.endpoints.push({
