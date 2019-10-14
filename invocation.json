@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "insurance",
+            "invocationName": "acme insurance",
             "intents": [
                 {
                     "name": "CommandBot",
