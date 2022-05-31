@@ -24,11 +24,11 @@ module.exports = new function() {
   var metadata = {
     allowConfigUpdate: true, //set to false to turn off REST endpoint of allowing update of metadata
     waitForMoreResponsesMs: 200,  //milliseconds to wait for additional webhook responses
-    amzn_appId: 'amzn1.ask.skill.91a5144e-6980-4ab5-b02c-c712f9d0802e',
+    amzn_appId: "amzn1.ask.skill.91a5144e-6980-4ab5-b02c-c712f9d0802e",
     channelSecretKey: 'xNVwObJRNJFIiytYGB5ShJOH71Jf3Z7I',
     channelUrl: 'https://idcs-oda-cbd6018d8c9849979fac514afa42c1d5-da2.data.digitalassistant.oci.oraclecloud.com/connectors/v2/listeners/webhook/channels/9bf8cf09-d632-4a58-9321-aca25c24ceef'
   };
-  
+
   this.randomIntInc = function (low, high) {
     return Math.floor(Math.random() * (high - low + 1) + low);
   };
@@ -40,7 +40,7 @@ module.exports = new function() {
   // expose this function to be stubbed
   this.sendWebhookMessageToBot= function (channelUrl, channelSecretKey, userId, messagePayload, additionalProperties, callback) {
     webhookUtil.messageToBotWithProperties(channelUrl, channelSecretKey, userId, messagePayload, additionalProperties, callback);
-  };  
+  };
 
   this.init= function (config) {
 
@@ -360,5 +360,4 @@ module.exports = new function() {
   return this;
 
 }();
-
 
