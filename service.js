@@ -28,7 +28,7 @@ module.exports = new function() {
     channelSecretKey: 'xNVwObJRNJFIiytYGB5ShJOH71Jf3Z7I',
     channelUrl: 'https://idcs-oda-cbd6018d8c9849979fac514afa42c1d5-da2.data.digitalassistant.oci.oraclecloud.com/connectors/v2/listeners/webhook/channels/9bf8cf09-d632-4a58-9321-aca25c24ceef'
   };
-
+  
   this.randomIntInc = function (low, high) {
     return Math.floor(Math.random() * (high - low + 1) + low);
   };
@@ -360,4 +360,3 @@ module.exports = new function() {
   return this;
 
 }();
-
